@@ -1,0 +1,43 @@
+{
+  "name": "checkout-app",
+  "version": "1.0.0",
+  "description": "This program does a checkout system for different ads",
+  "main": "dist/index.js",
+  "keywords": [],
+  "author": "Alon Faingertz",
+  "license": "ISC",
+  "scripts": {
+    "prepare": "husky install",
+    "start": "nodemon --exec ts-node src/index.ts",
+    "build": "tsc",
+    "lint": "eslint src/**/*.ts",
+    "format": "eslint src/**/*.ts --fix",
+    "test": "jest",
+    "test:watch": "npm test -- --watch",
+    "test:coverage": "npm test -- --coverage"
+  },
+  "dependencies": {
+    "typescript": "^4.8.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.2.2",
+    "@types/node": "^18.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.42.1",
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.0",
+    "jest": "^29.3.1",
+    "lint-staged": "^13.0.3",
+    "nodemon": "^2.0.20",
+    "prettier": "2.7.1",
+    "ts-jest": "^29.0.3",
+    "ts-node": "^10.9.1"
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts}": [
+      "eslint --fix"
+    ],
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}
