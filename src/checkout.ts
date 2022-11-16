@@ -6,7 +6,7 @@ export class Checkout {
 
   /**
    * Private constructor so no instance can be created except using the "new" static method
-   * @param rules 
+   * @param rules
    */
   private constructor(rules?: Validator[]) {
     this._rules = rules ?? [];
@@ -24,7 +24,7 @@ export class Checkout {
 
   /**
    * Adds a new item product to the cart
-   * @param item 
+   * @param item
    */
   add(item: Item): void {
     this._cart.set(item.name, [...(this._cart.get(item.name) ?? []), item]);
@@ -34,7 +34,7 @@ export class Checkout {
    * get total price of the package
    * @returns number
    */
-  get total(): number {
+  total(): number {
     /**
      * Apply the pricing rules on the cart
      */

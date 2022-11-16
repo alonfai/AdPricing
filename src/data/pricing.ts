@@ -49,6 +49,7 @@ export const RULE_NAMES = {
 
 //define the logic for each of the pre-defined set of pricing rules
 
+// 3 for 2 deal on classic ads if existing in the cart
 pricingRules.add(RULE_NAMES.THREE_FOR_TWO_ON_CLASSIC, (cart) => {
   const classicItems = cart.get(PRODUCT_NAMES.CLASSIC);
   if (classicItems) {
@@ -59,6 +60,7 @@ pricingRules.add(RULE_NAMES.THREE_FOR_TWO_ON_CLASSIC, (cart) => {
   return cart;
 });
 
+// standout ads discount price drop to $299.99
 pricingRules.add(RULE_NAMES.STANDOUT_DISCOUNT, (cart) => {
   let standoutItems = cart.get(PRODUCT_NAMES.STANDOUT);
   if (standoutItems) {
@@ -68,6 +70,7 @@ pricingRules.add(RULE_NAMES.STANDOUT_DISCOUNT, (cart) => {
   return cart;
 });
 
+// 5 for 4 deal on standout ads if existing in the cart
 pricingRules.add(RULE_NAMES.FIVE_FOR_FOUR_ON_STANDOUT, (cart) => {
   const standoutItems = cart.get(PRODUCT_NAMES.STANDOUT);
   if (standoutItems) {
@@ -77,6 +80,7 @@ pricingRules.add(RULE_NAMES.FIVE_FOR_FOUR_ON_STANDOUT, (cart) => {
   return cart;
 });
 
+// premium ads discount price drop to $389.99
 pricingRules.add(RULE_NAMES.PREIMUM_DISCOUNT, (cart) => {
   let preimumItems = cart.get(PRODUCT_NAMES.PREMIUM);
   if (preimumItems) {

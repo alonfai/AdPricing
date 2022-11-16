@@ -3,6 +3,10 @@ import { RULE_NAMES } from './pricing';
 
 export const customers: Customer[] = [
   {
+    name: 'default',
+    pricingRules: [],
+  },
+  {
     name: 'Second_Bite',
     pricingRules: [RULE_NAMES.THREE_FOR_TWO_ON_CLASSIC],
   },
