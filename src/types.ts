@@ -1,9 +1,4 @@
 /**
- * Options for supported currencies in the system
- */
-export type Currency = 'AUD' | 'USD';
-
-/**
  * A given Ad item in the system
  */
 export interface Item {
