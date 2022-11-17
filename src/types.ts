@@ -17,7 +17,8 @@ export interface Item {
 }
 
 /**
- * Validates a given cart and return a updated cart with price adjustments
+ * Validates an input cart against a given pricing rule and return the updated cart after price adjustments.
+ * Note: this method is immutable and not changing the original cart
  */
 export type Validator = (cart: Map<string, Item[]>) => Map<string, Item[]>;
 
@@ -30,7 +31,7 @@ export interface Customer {
    */
   name: string;
   /**
-   * List of special pricing rule keys that are applicable to that customer
+   * List of special pricing rule keys mapped to items inside pricing module that are applied to the customer
    */
   pricingRules: string[];
 }

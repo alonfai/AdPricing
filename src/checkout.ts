@@ -1,7 +1,13 @@
 import type { Item, Validator } from './types';
 
 export class Checkout {
+  /**
+   * Cart Map object with set of items
+   */
   private _cart: Map<string, Item[]>;
+  /**
+   * Given set of pricing rules applied to the cart
+   */
   private _rules: Validator[];
 
   /**
@@ -38,18 +44,21 @@ export class Checkout {
     /**
      * Apply the pricing rules on the cart
      */
-    for (const rule of this._rules) {
-      this._cart = rule(this._cart);
+    for (const ruleCallback of this._rules) {
+      this._cart = ruleCallback(this._cart);
     }
-    const products = Array.from(this._cart.values());
-    let sum = 0;
-    for (const productItems of products) {
-      const productTotal = productItems.reduce((accumulator, item) => {
+    /**
+     * Calculate the total cost of the cart by going over all items inside
+     */
+    let cartTotalCost = 0;
+    const cartItems = Array.from(this._cart.values());
+    for (const productItems of cartItems) {
+      const productTotalCost = productItems.reduce((accumulator, item) => {
         return accumulator + item.price;
       }, 0);
 
-      sum += productTotal;
+      cartTotalCost += productTotalCost;
     }
-    return sum;
+    return cartTotalCost;
   }
 }

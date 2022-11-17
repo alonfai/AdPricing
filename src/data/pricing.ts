@@ -17,7 +17,7 @@ class Rules {
   /**
    * Adds a new pricing rule to the system
    * @param name unique name for the rule
-   * @param validator
+   * @param validator callback to run cart check and price updates
    */
   add(name: string, validator: Validator) {
     this._rules.set(name, validator);
@@ -25,7 +25,7 @@ class Rules {
 
   /**
    * Remove a pricing rule from the system
-   * @param name
+   * @param name key of price ruling to remove from list
    */
   remove(name: string) {
     this._rules.delete(name);

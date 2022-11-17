@@ -1,6 +1,9 @@
 import type { Customer } from '../types';
 import { RULE_NAMES } from './pricing';
 
+/**
+ * Pre existing list of customers in the system
+ */
 export const customers: Customer[] = [
   {
     name: 'default',
