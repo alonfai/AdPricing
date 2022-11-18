@@ -15,9 +15,11 @@ the data structure needed to be flexible as possible so changes can be made with
 In this project, the main `npm` modules used are
 
 - Typescript
-- Jest
+- Jest (using ts-jest)
 - Yarn
 - ESLint + Prettier
+- lint-staged
+- Nodemon
 - Husky with git hooks support
 
 ---

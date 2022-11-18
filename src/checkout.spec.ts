@@ -20,7 +20,7 @@ describe('checkout for different customers', () => {
     co.add(products.get(PRODUCT_NAMES.PREMIUM)!);
 
     // validate the total price is correct
-    expect(co.total()).toEqual(987.97);
+    expect(co.total).toEqual(987.97);
   });
 
   it('SecondBite Customer', () => {
@@ -40,7 +40,7 @@ describe('checkout for different customers', () => {
     co.add(products.get(PRODUCT_NAMES.CLASSIC)!);
     co.add(products.get(PRODUCT_NAMES.PREMIUM)!);
 
-    expect(co.total()).toEqual(934.97);
+    expect(co.total).toEqual(934.97);
   });
 
   it('Axil Coffee Roasters', () => {
@@ -61,7 +61,7 @@ describe('checkout for different customers', () => {
     co.add(products.get(PRODUCT_NAMES.PREMIUM)!);
 
     // validate the total price is correct
-    expect(co.total()).toEqual(1294.96);
+    expect(co.total).toEqual(1294.96);
   });
 
   it('Myer', () => {
@@ -84,6 +84,6 @@ describe('checkout for different customers', () => {
     co.add(products.get(PRODUCT_NAMES.PREMIUM)!);
 
     // validate the total price is correct
-    expect(co.total()).toEqual(1681.95);
+    expect(co.total).toEqual(1681.95);
   });
 });

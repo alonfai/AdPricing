@@ -40,7 +40,7 @@ export class Checkout {
    * get total price of the package
    * @returns number
    */
-  total(): number {
+  get total(): number {
     /**
      * Apply the pricing rules on the cart
      */
