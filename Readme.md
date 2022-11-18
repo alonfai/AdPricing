@@ -33,9 +33,12 @@ This app was tested with Node.js 18.12.1 release
 
 ## Install
 
-Clone the project and install necessary modules using [Yarn package manager](https://classic.yarnpkg.com/en/docs/install):
+Clone the project and install [Yarn package manager](https://classic.yarnpkg.com/en/docs/install):
 
 ```
+git clone https://github.com/alonfai/AdPricing
+
+// Inside the project root run the following command to install necessary dependencies
 yarn install
 ```
 
